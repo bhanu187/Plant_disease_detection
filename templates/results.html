@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>RESULTS</title>
+	<img class="img1" src="https://media.giphy.com/media/UU9Efjvn0eNOM/giphy.gif" height="120px" alt="">
+	<style type="text/css">
+	th{
+		height:100px;
+		background-color:#3b5998;
+		color:white;
+
+	}
+	.img1{
+            position: absolute;
+            top: 22px;
+            left: 10px;
+
+        }
+	h1{
+	width:100%;
+	height:100px;
+	text-align:center;
+	background-color: #3b5998;
+	padding : 12px 10px;
+	margin-top: 20px;
+	color:white;
+}
+a:link, a:visited {
+  background-color: green;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: aqua;
+  color: black;
+}
+	</style>
+</head>
+<body>
+
+<h1>CROP DISEASE PREDICTIONS</h1>
+<p align="right"><a href="{{ url_for('index') }}">Back</a></p>
+
+<table border="1" width="1000px" align="center">
+<tr><th>IMAGE</th><th>PREDICTED</th></tr>
+</th>
+{% for file_url in file_urls %}
+    <tr>
+	<td><img height="350px" width="600px" src="{{ file_url[0] }}"></td>
+    <td>{{ file_url[1] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+</body>
+</html>

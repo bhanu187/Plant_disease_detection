@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <img class="img1" src="https://media.giphy.com/media/UU9Efjvn0eNOM/giphy.gif" height="120px" alt="">
+        <style type="text/css">
+        .img1{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+        }
+		.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		}
+        body{
+            
+            padding:0px;
+        }
+    	h1{
+	width:100%;
+	height:100px;
+	text-align:center;
+	background-color: #3b5998;
+	padding : 12px 10px;
+	margin-top: 0px;
+	color:white;
+}
+    	</style>
+        <title>Flask App</title>
+        {{ dropzone.load() }}	
+        {{ dropzone.style('border: 3px dashed <!--#0087F7--> green; margin: 8%; min-height: 10px;') }}
+	</head>
+    <body>
+		<h1 align="center">CROP DISEASE PREDICTOR</h1>
+		{{ dropzone.create(action_view='index') }}
+		<img class="center" src="http://masters.donntu.org/2011/igg/solopova/diss/images/image003.gif" alt="Internet Required" height="300" >	
+    </body>
+</html>
